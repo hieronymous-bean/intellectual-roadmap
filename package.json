@@ -1,0 +1,26 @@
+{
+  "name": "riverscape",
+  "version": "0.0.0-alpha",
+  "description": "vuejs boilerplate for simple count interface application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hieronymous-bean/riverscape.git"
+  },
+  "keywords": [
+    "vue",
+    "nuxt"
+  ],
+  "author": "jeffrey.brown",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hieronymous-bean/riverscape/issues"
+  },
+  "homepage": "https://github.com/hieronymous-bean/riverscape#readme",
+  "dependencies": {
+    "vue": "^3.0.2"
+  }
+}
