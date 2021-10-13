@@ -1,12 +1,7 @@
 <template>
   <div class="flex w-screen h-screen text-gray-700">
-    <div class="flex flex-col items-center flex-shrink-0 w-16 border-r border-gray-300 bg-gray-200 py-3">
-      <a class="w-10 h-10 rounded-lg bg-gray-400 hover:bg-gray-500" href="#"></a>
-      <a class="w-10 h-10 rounded-lg bg-gray-400 mt-4 shadow-outline border-4 border-gray-200" href="#"></a>
-      <a class="relative w-10 h-10 rounded-lg bg-gray-400 mt-4 hover:bg-gray-500" href="#">
-        <span class="absolute w-3 h-3 rounded-full bg-blue-400 top-0 right-0 -mt-1 -mr-1"></span>
-      </a>
-      <a class="w-10 h-10 rounded-lg bg-gray-400 mt-4 hover:bg-gray-500" href="#"></a>
+    <div class="flex flex-col items-center flex-shrink-0 w-16 border-r border-gray-200 bg-gray-200 py-3">
+      <workspace-selector v-for="(workspace, index) in this.workspaces" :key="index" :workspaceData="workspace"/>
       <a class="flex items-center justify-center w-10 h-10 rounded-lg bg-transparent mt-4 hover:bg-gray-400" href="#">
         <svg class="w-6 h-6 fill-current" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
@@ -33,13 +28,13 @@
             <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
             </svg>
-            <span class="ml-2 leading-none">Roadmaps</span>
+            <span class="ml-2 leading-none font-semibold">Roadmaps</span>
           </a>
           <a class="flex items-center h-8 hover:bg-gray-300 text-sm px-3" href="#">
             <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
             </svg>
-            <span class="ml-2 leading-none font-bold">Favorited Maps</span>
+            <span class="ml-2 leading-none">Favorited Roadmaps</span>
           </a>
           <a class="flex items-center h-8 hover:bg-gray-300 text-sm px-3" href="#">
             <span class="leading-none w-4">@</span>
@@ -194,14 +189,25 @@
   </div>
 </template>
 <script>
+// import components //
+import WorkspaceSelector from '../components/workspaces/WorkspaceSelector.vue';
+
+// import supplementary assets //
+import Workspaces from '../assets/data/workspaces.json';
 export default ({
   name: 'ApplicationContainer',
   data: () => ({
+    workspaces: Workspaces.data
   }),
+  components: {
+    WorkspaceSelector
+  },
   computed: {
+
   },
   methods: {
     
   }
+  
 })
 </script>

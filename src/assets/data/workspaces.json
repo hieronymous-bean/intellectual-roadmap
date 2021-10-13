@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Workspace One",
+      "description": "This is the description for workspace one.",
+      "color": "#F87171",
+      "icon": ""
+    },
+    {
+      "id": 2,
+      "name": "Workspace Two",
+      "description": "This is the description for workspace two.",
+      "color": "#FBBF24",
+      "icon": ""
+    }
+  ]
+}
