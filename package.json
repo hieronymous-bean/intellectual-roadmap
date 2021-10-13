@@ -1,26 +1,63 @@
 {
-  "name": "riverscape",
-  "version": "0.0.0-alpha",
-  "description": "vuejs boilerplate for simple count interface application.",
+  "name": "intellectual-roadmap",
+  "version": "0.0.1",
+  "description": "An application that allows you to piece together your own learning journey, with elements of gamification and progression.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "dev": "webpack serve --mode development",
+    "build-dev": "webpack --mode development",
+    "build-prod": "webpack --mode production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hieronymous-bean/riverscape.git"
+    "url": "git+https://github.com/hieronymous-bean/intellectual-roadmap.git"
   },
-  "keywords": [
-    "vue",
-    "nuxt"
-  ],
-  "author": "jeffrey.brown",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hieronymous-bean/riverscape/issues"
+    "url": "https://github.com/hieronymous-bean/intellectual-roadmap/issues"
   },
-  "homepage": "https://github.com/hieronymous-bean/riverscape#readme",
+  "homepage": "https://github.com/hieronymous-bean/intellectual-roadmap#readme",
   "dependencies": {
-    "vue": "^3.0.2"
+    "express": "^4.17.1",
+    "vue": "^3.2.20",
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2",
+    "vuex-persistedstate": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/preset-env": "^7.15.8",
+    "@vue/cli-service": "^4.5.13",
+    "@vue/compiler-sfc": "^3.2.20",
+    "autoprefixer": "^9.8.8",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.4.0",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "eslint-webpack-plugin": "^2.4.0",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.4.2",
+    "node-sass": "^6.0.1",
+    "postcss": "^7.0.39",
+    "sass": "1.32.12",
+    "sass-loader": "^10.2.0",
+    "sass-resources-loader": "^2.2.4",
+    "style-loader": "^3.3.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16",
+    "url-loader": "^4.1.1",
+    "vue-loader": "^16.8.1",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   }
 }
