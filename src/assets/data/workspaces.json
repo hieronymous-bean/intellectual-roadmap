@@ -5,7 +5,7 @@
       "ownerId": 1,
       "name": "Jeffrey's Primary Workspace",
       "description": "This is the description for workspace one.",
-      "color": "#EF4444",
+      "color": "#2563EB",
       "icon": ""
     },
     {
@@ -13,7 +13,7 @@
       "ownerId": 1,
       "name": "An Extra Workspace",
       "description": "This is the description for workspace two.",
-      "color": "#8B5CF6",
+      "color": "#4F46E5",
       "icon": ""
     }
   ]

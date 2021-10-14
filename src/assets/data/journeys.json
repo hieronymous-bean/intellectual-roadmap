@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "My First Journey",
+      "category": "technology",
       "workspace": 1,
       "ownerId": 1,
       "creator": 1
