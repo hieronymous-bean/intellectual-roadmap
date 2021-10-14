@@ -5,6 +5,7 @@
       "ownerId": 1,
       "name": "Jeffrey's Primary Workspace",
       "description": "This is the description for workspace one.",
+      "category": "Personal",
       "color": "#2563EB",
       "icon": ""
     },
@@ -13,14 +14,16 @@
       "ownerId": 1,
       "name": "An Extra Workspace",
       "description": "This is the description for workspace two.",
+      "category": "Professional",
       "color": "#4F46E5",
       "icon": ""
     },
     {
       "id": 3,
       "ownerId": 1,
-      "name": "An Extra Workspace",
+      "name": "Yet Another Workspace",
       "description": "This is the description for workspace two.",
+      "category": "Shared",
       "color": "#6D28D9",
       "icon": ""
     }

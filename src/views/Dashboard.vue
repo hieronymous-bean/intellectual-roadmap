@@ -12,8 +12,8 @@
           <div class="container p-5 mx-auto">
             <div class="flex flex-wrap w-full mb-2">
               <div class="w-full mb-6 lg:mb-0">
-                <h1 class="sm:text-4xl text-5xl font-normal text-gray-900">Journeys</h1>
-                <div class="h-1 w-20 bg-primary rounded"></div>
+                <h1 class="sm:text-4xl text-5xl font-light text-gray-900">Journeys</h1>
+                <div class="h-1 my-2 w-20 bg-primary rounded"></div>
               </div>
             </div>
             <div class="flex text-center">

@@ -2,7 +2,7 @@
   <div class="flex flex-col flex-shrink-0 w-64 border-r border-gray-300 bg-gray-50">
     <button @click="selectWorkspaceDashboard()" class="flex-shrink-0 relative text-sm focus:outline-none group">
       <div class="flex items-center justify-between w-full h-16 px-4 border-b border-gray-300 hover:bg-gray-100">
-        <span class="font-medium" :style="{ color: currentWorkspace.color }">
+        <span class="font-normal" :style="{ color: currentWorkspace.color }">
           {{ currentWorkspace.name }}
         </span>
         <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

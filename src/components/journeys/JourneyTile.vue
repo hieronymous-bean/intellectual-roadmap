@@ -1,7 +1,7 @@
 <template>
   <div @click="journeySelected(journeyData)" class="xl:w-96 md:w-1/2 mx-2 cursor-pointer">
-    <div class="bg-white border border-gray-400">
-      <div class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 w-full bg-cover bg-center mb-2 cursor-pointer" style="background-image: url(https://images.unsplash.com/photo-1633287453177-24823499b02c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=880&q=80)">
+    <div class="bg-white shadow-md">
+      <div class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 w-full bg-cover bg-center mb-2 cursor-pointer" :style="{ 'background-image': `url(${journeyData.image})` }">
         <div class="flex justify-end text-white cursor-pointer">
           Options
           <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
