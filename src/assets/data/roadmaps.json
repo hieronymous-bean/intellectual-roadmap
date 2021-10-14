@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Primary Roadmap",
-      "owner": 1,
+      "ownerId": 1,
       "workspace": 1,
       "journey": 1
     }

@@ -2,16 +2,18 @@
   "data": [
     {
       "id": 1,
-      "name": "Workspace One",
+      "ownerId": 1,
+      "name": "Jeffrey's Primary Workspace",
       "description": "This is the description for workspace one.",
-      "color": "#F87171",
+      "color": "#EF4444",
       "icon": ""
     },
     {
       "id": 2,
-      "name": "Workspace Two",
+      "ownerId": 1,
+      "name": "An Extra Workspace",
       "description": "This is the description for workspace two.",
-      "color": "#FBBF24",
+      "color": "#8B5CF6",
       "icon": ""
     }
   ]

@@ -2,7 +2,8 @@
 const initialState = () => ({
   currentRoadmap: null,
   currentJourney: null,
-  currentWorkspace: null
+  currentWorkspace: null,
+  selectedMenuItem: 'journeys',
 });
 
 // state //
@@ -18,6 +19,9 @@ const getters = {
   },
   getCurrentWorkspace(state) {
     return state.currentWorkspace
+  },
+  getSelectedMenuItem(state) {
+    return state.selectedMenuItem
   }
 }
 
@@ -34,6 +38,9 @@ const mutations = {
   },
   storeWorkspace: (state, workspace) => {
     state.currentWorkspace = workspace;
+  },
+  storeSelectedMenuItem: (state, menuItem) => {
+    state.selectedMenuItem = menuItem;
   },
   applicationLogout: (state) => {
     const newState = initial();

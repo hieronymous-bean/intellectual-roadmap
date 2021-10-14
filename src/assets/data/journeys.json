@@ -4,7 +4,7 @@
       "id": 1,
       "name": "My First Journey",
       "workspace": 1,
-      "owner": 1,
+      "ownerId": 1,
       "creator": 1
     }
   ]

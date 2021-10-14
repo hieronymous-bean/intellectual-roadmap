@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-// application layouts //
-import ApplicationContainer from '../layouts/ApplicationContainer.vue';
+// application containers //
+import ApplicationContainer from '../containers/ApplicationContainer.vue';
 
 const routes = [
   {

@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "id": 1,
+      "id": 12345,
       "firstName": "Jeffrey",
       "lastName": "Brown",
       "displayName": "Jeffrey Brown",
@@ -10,7 +10,7 @@
       "avatar": "",
       "favorites": [],
       "preferences": [],
-      "integrations": {}
+      "integrations": []
     }
   ]
 }
