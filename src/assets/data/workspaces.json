@@ -15,6 +15,14 @@
       "description": "This is the description for workspace two.",
       "color": "#4F46E5",
       "icon": ""
+    },
+    {
+      "id": 3,
+      "ownerId": 1,
+      "name": "An Extra Workspace",
+      "description": "This is the description for workspace two.",
+      "color": "#6D28D9",
+      "icon": ""
     }
   ]
 }

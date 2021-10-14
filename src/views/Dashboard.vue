@@ -1,13 +1,4 @@
 <template>
-  <div class="flex flex-col items-center flex-shrink-0 w-16 border-r border-gray-200 bg-gray-100 py-3">
-    <workspace-selector v-for="(workspace, index) in userWorkspaces" :key="index" :workspaceData="workspace"/>
-    <a class="flex items-center justify-center w-10 h-10 rounded-lg bg-transparent mt-4 hover:bg-gray-400" href="#">
-      <svg class="w-6 h-6 fill-current" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-      </svg>
-    </a>
-  </div>
-  <sidebar-menu />
   <div class="flex flex-col flex-grow">
     <div class="flex items-center flex-shrink-0 h-16 bg-white border-b border-gray-300 px-4">
       <div>
@@ -15,17 +6,7 @@
         <span class="text-sm leading-none">from {{ currentWorkspace.name }}</span>
       </div>
     </div>
-    <div class="flex flex-col flex-grow overflow-auto">
-      <div class=" px-4 py-3">
-        <div>
-          Journeys for the Selected Workspace
-          <journey-tile v-for="(journey, index) in this.userJourneys" :key="index" :journeyData="journey"/>
-        </div>
-        <div>
-          Roadmaps for the Selected Journey
-          <roadmap-tile v-for="(roadmap, index) in roadmaps" :key="index" :roadmapData="roadmap"/>
-        </div>
-      </div>
+    <div class="flex flex-grow overflow-auto w-full">
     </div>
     <div class="h-12 bg-white px-4 pb-4">
       <div class="flex items-center border-2 border-gray-300 rounded-sm p-1">
@@ -114,11 +95,6 @@
   
 </template>
 <script>
-// import components //
-import JourneyTile from '../components/journeys/JourneyTile.vue';
-import RoadmapTile from '../components/roadmaps/RoadmapTile.vue';
-import SidebarMenu from '../components/layouts/SidebarMenu.vue';
-import WorkspaceSelector from '../components/workspaces/WorkspaceSelector.vue';
 
 export default ({
   name: 'ApplicationContainer',
@@ -126,10 +102,7 @@ export default ({
     
   }),
   components: {
-    JourneyTile,
-    RoadmapTile,
-    SidebarMenu,
-    WorkspaceSelector
+
   },
   computed: {
     currentWorkspace: function() {

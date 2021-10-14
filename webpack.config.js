@@ -17,6 +17,9 @@ module.exports = {
       vue: "@vue/runtime-dom"
     }
   },
+  devServer: {
+    historyApiFallback: true
+  },
   module: {
     rules: [
       {

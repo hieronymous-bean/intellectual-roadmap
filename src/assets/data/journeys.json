@@ -4,6 +4,16 @@
       "id": 1,
       "name": "My First Journey",
       "category": "technology",
+      "description": "This is the description for this particular journey.",
+      "workspace": 1,
+      "ownerId": 1,
+      "creator": 1
+    },
+    {
+      "id": 2,
+      "name": "Another One",
+      "category": "technology",
+      "description": "A second journey for testing purposes.",
       "workspace": 1,
       "ownerId": 1,
       "creator": 1

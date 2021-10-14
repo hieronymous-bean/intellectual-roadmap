@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col flex-shrink-0 w-64 border-r border-gray-300 bg-gray-50">
-    <button class="flex-shrink-0 relative text-sm focus:outline-none group">
+    <button @click="selectWorkspaceDashboard()" class="flex-shrink-0 relative text-sm focus:outline-none group">
       <div class="flex items-center justify-between w-full h-16 px-4 border-b border-gray-300 hover:bg-gray-100">
         <span class="font-medium" :style="{ color: currentWorkspace.color }">
           {{ currentWorkspace.name }}
@@ -41,7 +41,10 @@ export default ({
     }
   },
   methods: {
-    
+    selectWorkspaceDashboard: function() {
+      this.$store.commit('application/storeSelectedMenuItem', MenuItems.data[0]);
+      this.$router.push({ path: '/app/dashboard' });
+    }
   },
   props: [
 

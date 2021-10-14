@@ -2,14 +2,20 @@
   "data": [
     {
       "id": 1,
-      "name": "Journeys",
-      "url": "/:journey",
+      "name": "Dashboard",
+      "url": "/app/dashboard",
       "icon": ""
     },
     {
       "id": 2,
+      "name": "Journeys",
+      "url": "/app/journeys",
+      "icon": ""
+    },
+    {
+      "id": 3,
       "name": "Roadmaps",
-      "url": "/:roadmap",
+      "url": "/app/roadmaps",
       "icon": ""
     }
   ]
