@@ -18,11 +18,14 @@
       </div>
       <div class="flex flex-col flex-grow overflow-auto">
         <div class="flex px-4 py-3">
-          Roadmaps for the Selected Journey
-          <div v-for="(roadmap, index) in roadmaps" :key="index"></div>
-
-          {{ this.$store.getters['application/getSelectedMenuItem'] }}
-
+          <div>
+            Journeys for the Selected Workspace
+            <journey-tile v-for="(journey, index) in journeys" :key="index" />
+          </div>
+          <div>
+            Roadmaps for the Selected Journey
+            <roadmap-tile v-for="(roadmap, index) in roadmaps" :key="index" />
+          </div>
         </div>
       </div>
       <div class="h-12 bg-white px-4 pb-4">
@@ -118,6 +121,7 @@ import SidebarMenu from '../components/layouts/SidebarMenu.vue';
 
 // import supplementary assets //
 import Workspaces from '../assets/data/workspaces.json';
+
 export default ({
   name: 'ApplicationContainer',
   data: () => ({
@@ -129,7 +133,7 @@ export default ({
   },
   computed: {
     currentWorkspace: function() {
-      return this.$store.getters['application/getCurrentWorkspace'];
+      return this.$store.getters['workspace/getCurrentWorkspace'];
     },
     selectedMenuItem: function() {
       return this.$store.getters['application/getSelectedMenuItem'];

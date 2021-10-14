@@ -37,7 +37,7 @@ export default ({
   },
   computed: {
     currentWorkspace: function() {
-      return this.$store.getters['application/getCurrentWorkspace'];
+      return this.$store.getters['workspace/getCurrentWorkspace'];
     }
   },
   methods: {

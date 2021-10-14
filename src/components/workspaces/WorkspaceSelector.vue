@@ -11,13 +11,14 @@ export default ({
   }),
   computed: {
     selected: function() {
-      let currentWorkspace = this.$store.getters['application/getCurrentWorkspace'];
-      return this.workspaceData.id == currentWorkspace.id;
+      // let currentWorkspace = this.$store.getters['workspace/getCurrentWorkspace'];
+      // return this.workspaceData.id == currentWorkspace.id;
+      return true;
     }
   },
   methods: {
     workspaceSelected: function() {
-      return this.$store.commit('application/storeWorkspace', this.workspaceData)
+      return this.$store.commit('workspace/storeCurrentWorkspace', this.workspaceData)
     }
   },
   props: [

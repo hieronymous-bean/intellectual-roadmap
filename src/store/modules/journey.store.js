@@ -1,6 +1,7 @@
 // initial state object //
 const initialState = () => ({
-  selectedMenuItem: 'journeys',
+  currentJourney: null,
+  userJourneys: null
 });
 
 // state //
@@ -8,8 +9,11 @@ const state = initialState();
 
 // getters //
 const getters = {
-  getSelectedMenuItem(state) {
-    return state.selectedMenuItem
+  getCurrentJourney(state) {
+    return state.currentJourney
+  },
+  getUserJourneys(state) {
+    return state.userJourneys
   }
 }
 
@@ -18,10 +22,13 @@ const actions = { }
 
 // mutations //
 const mutations = { 
-  storeSelectedMenuItem: (state, menuItem) => {
-    state.selectedMenuItem = menuItem;
+  storeCurrentJourney: (state, journey) => {
+    state.currentJourney = journey;
   },
-  applicationLogout: (state) => {
+  storeUserJourneys: (state, journeys) => {
+    state.userJourneys = journeys
+  },
+  journeyLogout: (state) => {
     const newState = initial();
     Object.keys(newState).forEach(key => {
       state[key] = newState[key]
