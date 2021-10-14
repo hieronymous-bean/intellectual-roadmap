@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "id": 12345,
+      "firstName": "Jeffrey",
+      "lastName": "Brown",
+      "displayName": "Jeffrey Brown",
+      "email": "jeffreybrown7193@gmail.com",
+      "photo": "",
+      "avatar": "",
+      "favorites": [],
+      "preferences": [],
+      "integrations": []
+    }
+  ]
+}
