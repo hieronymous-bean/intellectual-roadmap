@@ -2,8 +2,8 @@
   <div class="flex flex-col flex-grow">
     <div class="flex items-center flex-shrink-0 h-16 bg-white border-b border-gray-300 px-4">
       <div>
-        <h1 class="text-xl font-bold leading-none">{{ selectedMenuItem.name }}</h1>
-        <span class="text-sm leading-none">from {{ currentWorkspace.name }}</span>
+        <h1 class="text-2xl font-regular leading-none">{{ selectedMenuItem.name }}</h1>
+        <span class="text-sm font-light leading-none">from {{ currentWorkspace.name }}</span>
       </div>
     </div>
     <div class="flex flex-grow overflow-auto w-full">

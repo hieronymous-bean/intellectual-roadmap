@@ -4,10 +4,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-
+        galano: ['Galano','sans-serif'],
       },
       colors: {
-        
+        primary: '#7C3AED',
+        greyone: '#F9FAFB',
+        greytwo: '#E5E7EB'
       }
     },
   }

@@ -1,5 +1,5 @@
 <template>
-  <div @click="journeySelected(journeyData)" class="xl:w-96 md:w-1/2 p-4">
+  <div @click="journeySelected(journeyData)" class="xl:w-96 md:w-1/2 mx-2 cursor-pointer">
     <div class="bg-white border border-gray-400">
       <div class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 w-full bg-cover bg-center mb-2 cursor-pointer" style="background-image: url(https://images.unsplash.com/photo-1633287453177-24823499b02c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=880&q=80)">
         <div class="flex justify-end text-white cursor-pointer">
@@ -11,8 +11,8 @@
       </div>
       <div class="pb-5 px-5">
         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">{{ journeyData.category }}</h3>
-        <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{ journeyData.name }}</h2>
-        <p class="leading-relaxed text-base">{{ journeyData.description }}</p>
+        <h2 class="text-lg text-gray-900 font-normal title-font mb-4">{{ journeyData.name }}</h2>
+        <p class="text-sm">{{ journeyData.description }}</p>
       </div>
       <div class="flex p-4 border-t border-gray-300 text-gray-700">
         <div class="flex-1 inline-flex items-center">
@@ -54,9 +54,9 @@ export default ({
   },
   methods: {
     journeySelected(journey) {
-      const journeyRoute = `/app/${journey.id}`;
-      this.$router.push({ path: journeyRoute });
-      console.log(journeyRoute);
+      const journeyRoute = `/app/journeys/${journey.id}`;
+      this.$store.commit('journey/storeCurrentJourney', journey);
+      return this.$router.push({ path: journeyRoute });
     }
   },
   props: [

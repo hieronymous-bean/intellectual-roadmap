@@ -1,12 +1,54 @@
 <template>
   <div class="flex flex-col flex-grow">
-    <div class="flex items-center flex-shrink-0 h-16 bg-white border-b border-gray-300 px-4">
+    <div class="flex items-center h-16 bg-white border-b border-gray-300 px-5">
       <div>
-        <h1 class="text-xl font-bold leading-none">{{ selectedMenuItem.name }}</h1>
-        <span class="text-sm leading-none">from {{ currentWorkspace.name }}</span>
+        <h1 class="text-2xl font-regular leading-none">{{ selectedMenuItem.name }}</h1>
+        <span class="text-sm font-light leading-none">from {{ currentWorkspace.name }}</span>
       </div>
     </div>
     <div class="flex flex-grow overflow-auto w-full">
+      <div class="flex flex-col">
+        <section class="text-gray-600">
+          <div class="container p-5 mx-auto">
+            <div class="flex flex-wrap w-full mb-2">
+              <div class="w-full mb-6 lg:mb-0">
+                <h1 class="sm:text-4xl text-5xl font-normal text-gray-900">Journeys</h1>
+                <div class="h-1 w-20 bg-primary rounded"></div>
+              </div>
+            </div>
+            <div class="flex text-center">
+              <journey-thumbnail v-for="(journey, index) in this.userJourneys" :key="index" :journeyData="journey"/>  
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="flex flex-grow overflow-auto w-full">
+      <div class="flex flex-col">
+        <!-- component -->
+        <section class="text-gray-600">
+          <div class="container p-5 mx-auto">
+            <div class="flex flex-wrap w-full mb-8">
+              <div class="w-full mb-6 lg:mb-0">
+                <h1 class="sm:text-4xl text-5xl font-light mb-2 text-gray-900">Roadmaps</h1>
+                <div class="h-1 w-20 bg-primary rounded"></div>
+              </div>
+            </div>
+            <div class="flex text-center">
+              <div class="w-44">
+                <div class="bg-greytwo rounded-lg p-2 xl:p-6">
+                  a
+                </div>
+              </div>
+              <div class="w-44">
+                <div class="bg-greytwo rounded-lg p-2 xl:p-6">
+                  a
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
     <div class="h-12 bg-white px-4 pb-4">
       <div class="flex items-center border-2 border-gray-300 rounded-sm p-1">
@@ -41,7 +83,9 @@
         </button>
       </div>
     </div>
+    
   </div>
+  
   <div class="flex flex-col flex-shrink-0 w-1/4 max-w-xs border-l border-gray-300 bg-gray-100">
     <div class="flex items-center h-16 border-b border-gray-300 px-4">
       <div class="">
@@ -95,6 +139,8 @@
   
 </template>
 <script>
+// import components //
+import JourneyThumbnail from '../components/journeys/JourneyThumbnail.vue';
 
 export default ({
   name: 'ApplicationContainer',
@@ -102,7 +148,7 @@ export default ({
     
   }),
   components: {
-
+    JourneyThumbnail
   },
   computed: {
     currentWorkspace: function() {

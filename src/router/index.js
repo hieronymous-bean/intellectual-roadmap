@@ -30,12 +30,22 @@ const routes = [
       {
         path: '/app/journeys',
         component: ViewJourneys,
-        name: 'ViewJourneys'
+        name: 'ViewJourneys',
+      },
+      {
+        path: '/app/journeys/:journeyId',
+        component: JourneyDetails,
+        name: 'JourneyDetails'
       },
       {
         path: '/app/roadmaps',
         component: ViewRoadmaps,
         name: 'ViewRoadmaps'
+      },
+      {
+        path: '/app/roadmaps/:roadmapId',
+        component: RoadmapDetails,
+        name: 'RoadmapDetails'
       }
     ]
   }
