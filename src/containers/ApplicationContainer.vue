@@ -1,6 +1,6 @@
 <template>
   <div class="flex w-screen h-screen text-gray-700 font-galano">
-    <div class="flex flex-col items-center flex-shrink-0 w-16 border-r border-gray-200 bg-gray-100 py-3">
+    <div class="flex flex-col items-center flex-shrink-0 w-16 border-r border-gray-200 bg-greyone py-3">
       <workspace-selector v-for="(workspace, index) in userWorkspaces" :key="index" :workspaceData="workspace"/>
       <a class="flex items-center justify-center w-10 h-10 rounded-lg bg-transparent mt-4 hover:bg-gray-400" href="#">
         <svg class="w-6 h-6 fill-current" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

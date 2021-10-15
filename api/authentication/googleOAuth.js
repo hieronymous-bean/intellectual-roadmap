@@ -10,29 +10,22 @@ passport.use(new GoogleStrategy({
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
   callbackURL: "http://localhost:3000/auth/google/callback"
 },
-async function(accessToken, refreshToken, profile, cb) {
-
-  console.log('accessToken: ', accessToken);
-  console.log('refresh token: ', refreshToken);
-  console.log('profile: ', profile);
-  console.log('cb: ', cb);
-
-  let user = await findOrCreateUser(profile);
-  return user;
-
+function(accessToken, refreshToken, profile, done) {
+  findOrCreateUser((profile), function(err, data) {
+    return done(err, data);
+  })
 }));
 
-
 module.exports = function(app){
-  app.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
+  app.get('/auth/google', passport.authenticate('google', { 
+    scope: ['profile'] 
+  }));
 
   app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/auth/login' }),
   function(req, res) {
-    // Successful authentication, redirect home.
-    console.log('success');
-    res.redirect('/');
+    console.log(req)
+    res.send('ok')
   });
-
 
   passport.serializeUser(function(user, cb) {
     cb(null, user);

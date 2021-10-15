@@ -86,7 +86,7 @@
     
   </div>
   
-  <div class="flex flex-col flex-shrink-0 w-1/4 max-w-xs border-l border-gray-300 bg-gray-100">
+  <div class="flex flex-col flex-shrink-0 w-1/4 max-w-xs border-l border-gray-300 bg-greyone">
     <div class="flex items-center h-16 border-b border-gray-300 px-4">
       <div class="">
         <h2 class="text-sm font-semibold leading-none">Additional Utilities</h2>

@@ -1,6 +1,13 @@
 /* workspace.store.js */
 import axios from "axios";
 
+// define variables from environment //
+const ENV = process.env.ENV;
+let apiEndpointDomain;
+if (ENV === 'development') {
+  apiEndpointDomain = process.env.DEV_API_DOMAIN;
+}
+
 // initial state object //
 const initialState = () => ({
   currentWorkspace: null,
@@ -24,12 +31,6 @@ const getters = {
 const actions = {
 
   createNewWorkspace: ({commit, dispatch}, payload) => {
-    const ENV = process.env.ENV;
-    let apiEndpointDomain;
-    if (ENV === 'development') {
-      apiEndpointDomain = process.env.DEV_DOMAIN;
-    }
-
     return axios({
       method: 'post',
       url: `${apiEndpointDomain}/api/workspace/createNewWorkspace`,

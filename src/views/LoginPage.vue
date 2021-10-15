@@ -5,11 +5,11 @@
         <div class="w-full lg:max-w-2xl md:max-w-md z-10">
           <div class="md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full shadow-md py-8 sm:rounded-lg md:rounded-none bg-white">
             <div class="max-w-xl w-full space-y-8">
-              <div class="text-center">
-                <h2 class="text-4xl font-thin text-black">
+              <div class="text-center text-dark">
+                <h2 class="text-4xl font-thin">
                   Welcome Back!
                 </h2>
-                <p v-show="!this.loggedIn" class="mt-2 text-sm text-black">Please sign in to your Polestar account.</p>
+                <p v-show="!this.loggedIn" class="mt-2 text-sm font-light">Please sign in to your Polestar account.</p>
                 <p v-show="this.loggedIn" class="mt-2 text-md text-black">You're already logged in! <router-link to="/" class="text-primary underline cursor-pointer">Click here</router-link> to access Polestar, or you can <span class="text-primary underline cursor-pointer" @click="this.$store.dispatch('authentication/logout')">log out</span> of your account.</p>
               </div>
               <div>
@@ -87,7 +87,10 @@ export default {
   },
   methods: {
     googleLogIn() {
-
+      this.$store.dispatch('authentication/googleLogIn').then(res => {
+        console.log("User Logged In: ", res);
+        if (!res) return;
+      });
     }
   },
 

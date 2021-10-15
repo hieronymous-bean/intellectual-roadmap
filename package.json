@@ -1,6 +1,6 @@
 {
   "name": "intellectual-roadmap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An application that allows you to piece together your own learning journey, with elements of gamification and progression.",
   "main": "index.js",
   "scripts": {
