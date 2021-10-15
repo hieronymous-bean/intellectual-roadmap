@@ -1,3 +1,6 @@
+/* workspace.store.js */
+import axios from "axios";
+
 // initial state object //
 const initialState = () => ({
   currentWorkspace: null,
@@ -18,7 +21,28 @@ const getters = {
 }
 
 // actions //
-const actions = { }
+const actions = {
+
+  createNewWorkspace: ({commit, dispatch}, payload) => {
+    const ENV = process.env.ENV;
+    let apiEndpointDomain;
+    if (ENV === 'development') {
+      apiEndpointDomain = process.env.DEV_DOMAIN;
+    }
+
+    return axios({
+      method: 'post',
+      url: `${apiEndpointDomain}/api/workspace/createNewWorkspace`,
+      data: {
+        workspace: payload,       
+      }
+    }).then(response => {
+      return response;
+    })
+    
+  }
+
+}
 
 // mutations //
 const mutations = { 

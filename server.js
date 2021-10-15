@@ -5,10 +5,12 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 
-// required modules //
-const bodyParser = require('body-parser');
+// cors middleware //
+var cors = require('cors');
+app.use(cors());
 
-// request body parsing middleware //
+// body parsing middleware //
+const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: "false" }));
 app.use(bodyParser.json());
 
@@ -27,3 +29,6 @@ async function main() {
 
 main().catch(err => console.log(err));
 
+// main server init //
+const port = process.env.SERVER_PORT || '3000';
+app.listen(port, () => console.log(`Listening on port ${port}`));

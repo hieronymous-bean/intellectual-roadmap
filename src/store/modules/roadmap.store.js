@@ -1,3 +1,6 @@
+/* roadmap.store.js */
+import axios from "axios";
+
 // initial state object //
 const initialState = () => ({
   currentRoadmap: null,
@@ -18,7 +21,13 @@ const getters = {
 }
 
 // actions //
-const actions = { }
+const actions = {
+
+  createNewRoadmap: ({commit, dispatch}, payload) => {
+    
+  }
+
+}
 
 // mutations //
 const mutations = { 

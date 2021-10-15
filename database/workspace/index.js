@@ -10,9 +10,10 @@ const createAndSaveWorkspace = (workspaceDetails) => {
 };
 
 module.exports = function(app){
-
-  app.post( '/api/', function(req, res) {
+  app.post('/api/workspace/createNewWorkspace', async (req, res) => {
     console.log(req.body);
+    let createWorkspace = createAndSaveWorkspace(req.body.workspace);
+    res.send(createWorkspace);
   });
 
 }

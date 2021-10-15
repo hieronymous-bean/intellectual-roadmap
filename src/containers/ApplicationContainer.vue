@@ -11,9 +11,11 @@
     <sidebar-menu />
     <router-view />
   </div>
+  <create-workspace-modal />
 </template>
 <script>
 // import components //
+import CreateWorkspaceModal from '../components/workspaces/CreateWorkspaceModal.vue';
 import SidebarMenu from '../components/layouts/SidebarMenu.vue';
 import WorkspaceSelector from '../components/workspaces/WorkspaceSelector.vue';
 
@@ -23,6 +25,7 @@ export default ({
     
   }),
   components: {
+    CreateWorkspaceModal,
     SidebarMenu,
     WorkspaceSelector
   },

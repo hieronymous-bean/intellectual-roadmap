@@ -1,3 +1,5 @@
+/* application.store.js */
+
 // initial state object //
 const initialState = () => ({
   selectedMenuItem: 'journeys',
