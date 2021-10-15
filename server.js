@@ -17,6 +17,9 @@ app.use(bodyParser.json());
 // load database middleware, schema, and methods //
 require('./database/workspace/index.js')(app);
 
+// load authentication middleware and routes //
+require('./api/authentication/googleOAuth.js')(app);
+
 // connect to mongodb database //
 const mongoose = require('mongoose');
 

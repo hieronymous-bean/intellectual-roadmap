@@ -2,9 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 // application containers //
 import ApplicationContainer from '../containers/ApplicationContainer.vue';
+import AuthenticationContainer from '../containers/AuthenticationContainer.vue';
 
 // application views //
 import Dashboard from '../views/Dashboard.vue';
+import LoginPage from '../views/LoginPage.vue';
 import JourneyDetails from '../views/JourneyDetails.vue';
 import RoadmapDetails from '../views/RoadmapDetails.vue';
 import ViewJourneys from '../views/ViewJourneys.vue';
@@ -46,6 +48,19 @@ const routes = [
         path: '/app/roadmaps/:roadmapId',
         component: RoadmapDetails,
         name: 'RoadmapDetails'
+      }
+    ]
+  },
+  {
+    path: '/auth',
+    component: AuthenticationContainer,
+    name: 'AuthenticationContainer',
+    redirect: '/auth/login',
+    children: [
+      {  
+        path: '/auth/login',
+        component: LoginPage,
+        name: "LoginPage"
       }
     ]
   }
