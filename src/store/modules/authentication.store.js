@@ -1,6 +1,5 @@
 /* authentication.store.js */
 import axios from "axios";
-import router from '../../router';
 
 // define variables from environment //
 const ENV = process.env.ENV;
@@ -27,9 +26,13 @@ const getters = {
 
 // actions //
 const actions = {
-  googleLogIn: ({commit, dispatch}) => {
-   router.push({redirect: window.location.href = 'http://localhost:3000/auth/google'})
-    
+  googleLogIn: async ({commit, dispatch}) => {
+    let a = await axios.get(`${apiEndpointDomain}/auth/google`).then(res => {
+      console.log(res)
+      return res;
+    })
+
+    return a
   },
   logout: ({}) => {
     console.log('logout')
