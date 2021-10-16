@@ -1,9 +1,9 @@
 <template>
-  <div class="flex justify-center h-screen items-center bg-gray-200 antialiased">
-    <div class="flex flex-col w-11/12 sm:w-5/6 lg:w-1/2 max-w-2xl mx-auto rounded-lg border border-gray-300 shadow-xl">
-      <div class="flex flex-row justify-between p-6 bg-white border-b border-gray-200 rounded-tl-lg rounded-tr-lg">
-        <p class="font-semibold text-gray-800">Create a New Workspace</p>
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <div class="flex items-center w-screen h-screen absolute z-50 bg-black bg-opacity-10 backdrop-filter backdrop-blur-sm ">
+    <div class="flex flex-col w-11/12 sm:w-5/6 lg:w-1/2 max-w-2xl mx-auto rounded-lg">
+      <div class="flex flex-row justify-between p-4 bg-white border-b border-gray-200 rounded-tl-lg rounded-tr-lg">
+        <p class="font-light text-lg text-dark">Create a New Workspace</p>
+        <svg @click="$emit('closeCreateWorkspaceModal')" class="w-6 h-6 cursor-pointer hover:bg-greyone p-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -13,7 +13,7 @@
         </svg>
       </div>
       <div class="flex flex-col px-6 py-5 bg-gray-50">
-        <p class="mb-2 font-semibold text-gray-700">Workspace Name</p>
+        <p class="mb-2 font-normal text-dark">Workspace Name</p>
         <input
           type="text"
           name=""
@@ -21,7 +21,7 @@
           class="w-full mb-5 p-5 bg-white border border-gray-200 rounded shadow-sm appearance-none"
           id="" v-model="workspaceName"
         />
-        <p class="mb-2 font-semibold text-gray-700">Workspace Description</p>
+        <p class="mb-2 font-normal text-dark">Workspace Description</p>
         <textarea
           type="text"
           name=""
@@ -31,7 +31,7 @@
         ></textarea>
         <div class="flex flex-col sm:flex-row items-center mb-5 sm:space-x-5">
           <div class="w-full sm:w-1/2">
-            <p class="mb-2 font-semibold text-gray-700">Workspace Color</p>
+            <p class="mb-2 font-normal text-dark">Workspace Color</p>
             <select type="text" name="" v-model="workspaceColor" class="w-full p-5 bg-white border border-gray-200 rounded shadow-sm appearance-none" id="">
               <option value="#000000">Purple</option>
               <option value="#000000">Blue</option>
@@ -40,7 +40,7 @@
             </select>
           </div>
           <div class="w-full sm:w-1/2 mt-2 sm:mt-0">
-            <p class="mb-2 font-semibold text-gray-700">Next step</p>
+            <p class="mb-2 font-normal text-dark">Next step</p>
             <select
               type="text"
               name=""
@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="flex flex-row items-center justify-between p-5 bg-white border-t border-gray-200 rounded-bl-lg rounded-br-lg">
-        <button class="px-4 py-2 text-gray-300 font-semibold bg-gray-100 rounded">
+        <button @click="$emit('closeCreateWorkspaceModal')" class="px-4 py-2 text-gray-300 font-semibold bg-gray-100 hover:bg-gray-200 rounded">
           Cancel
         </button>
         <button @click="createNewWorkspace()" class="px-4 py-2 text-white font-semibold bg-blue-500 rounded">

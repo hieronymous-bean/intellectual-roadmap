@@ -7,17 +7,56 @@
       </div>
     </div>
     <div class="flex flex-grow overflow-auto w-full">
-      <div class="flex flex-col">
+      <div class="flex">
         <section class="text-gray-600">
-          <div class="container p-5 mx-auto">
-            <div class="flex flex-wrap w-full mb-2">
+          <div class="p-5 w-full">
+            <div class="w-full mb-2">
               <div class="w-full mb-6 lg:mb-0">
                 <h1 class="sm:text-4xl text-5xl font-light text-gray-900">Journeys</h1>
                 <div class="h-1 my-2 w-20 bg-primary rounded"></div>
               </div>
             </div>
-            <div class="flex text-center">
-              <journey-thumbnail v-for="(journey, index) in this.userJourneys" :key="index" :journeyData="journey"/>  
+            <div class="flex justify-between w-full space-x-5">
+              <journey-thumbnail v-for="(journey, index) in this.userJourneys" :key="index" :journeyData="journey"/> 
+              <div class="flex text-left my-5 w-96"> 
+                <div class="">
+                  <div class="flex flex-col">
+                    <div class="bg-white shadow-sm border-2 border-dashed rounded-3xl p-4">
+                      <div class="flex-none lg:flex">
+                        <div class="h-full w-full lg:h-48 lg:w-48 lg:mb-0 mb-3">
+                          
+                        </div>
+                        <div class="flex-auto ml-3 justify-evenly py-2">
+                        <div class="flex flex-wrap ">
+                          <div class="w-full flex-none text-xs text-blue-700 font-medium ">
+                            
+                          </div>
+                          <h2 class="flex-auto text-lg font-light"></h2>
+                        </div>
+                        <p class="mt-3"></p>
+                        <div class="flex py-4  text-sm text-gray-500">
+                          <div class="flex-1 inline-flex items-center">
+                            
+                            <p class=""></p>
+                          </div>
+                          <div class="flex-1 inline-flex items-center">
+                            
+                            <p class=""></p>
+                          </div>
+                        </div>
+                       
+                          <div class="flex space-x-3 text-sm font-medium">
+                            <div class="flex-auto flex space-x-3">
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div> 
             </div>
           </div>
         </section>
