@@ -1,5 +1,5 @@
 <template>
-  <a @click="menuItemSelected(menuItemData)" :class="{ 'font-semibold': itemIsSelected }"  class="flex items-center h-8 hover:bg-gray-100 text-sm px-3 cursor-pointer">
+  <a @click="menuItemSelected(menuItemData)" :class="{ 'font-normal': itemIsSelected }"  class="flex items-center h-10 hover:bg-gray-100 text-lg font-light px-3 cursor-pointer">
     <span class="leading-none w-4" v-html="menuItemData.icon"></span>
     <span class="ml-2 leading-none">{{ menuItemData.name }}</span>
   </a>
@@ -22,7 +22,9 @@ export default ({
   },
   methods: {
     menuItemSelected: function(item) {
-      return this.$store.commit('application/storeSelectedMenuItem', item)
+      this.$store.commit('application/storeSelectedMenuItem', item);
+      let itemPathName = item.name.toLowerCase();
+      this.$router.push({ path: `/app/${itemPathName}` })
     }
   },
   props: [

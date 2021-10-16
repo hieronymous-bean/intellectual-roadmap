@@ -4,9 +4,21 @@
       "id": 1,
       "name": "My First Journey",
       "category": "technology",
+      "description": "This is the description for this particular journey.",
       "workspace": 1,
       "ownerId": 1,
-      "creator": 1
+      "creator": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/polestar-4d6c0.appspot.com/o/images%2Fcastles1.jpeg?alt=media&token=9e390b4a-0b2e-4552-bb27-c85fc3094a38"
+    },
+    {
+      "id": 2,
+      "name": "Another One",
+      "category": "technology",
+      "description": "A second journey for testing purposes.",
+      "workspace": 1,
+      "ownerId": 1,
+      "creator": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/polestar-4d6c0.appspot.com/o/images%2Ffantasy.jpeg?alt=media&token=eed7e92c-16a4-4284-9eed-91f600ad1cf8"
     }
   ]
 }

@@ -1,30 +1,92 @@
 <template>
-  <div class="flex flex-col items-center flex-shrink-0 w-16 border-r border-gray-200 bg-gray-100 py-3">
-    <workspace-selector v-for="(workspace, index) in userWorkspaces" :key="index" :workspaceData="workspace"/>
-    <a class="flex items-center justify-center w-10 h-10 rounded-lg bg-transparent mt-4 hover:bg-gray-400" href="#">
-      <svg class="w-6 h-6 fill-current" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-      </svg>
-    </a>
-  </div>
-  <sidebar-menu />
   <div class="flex flex-col flex-grow">
-    <div class="flex items-center flex-shrink-0 h-16 bg-white border-b border-gray-300 px-4">
+    <div class="flex items-center h-16 bg-white border-b border-gray-300 px-5">
       <div>
-        <h1 class="text-xl font-bold leading-none">{{ selectedMenuItem.name }}</h1>
-        <span class="text-sm leading-none">from {{ currentWorkspace.name }}</span>
+        <h1 class="text-2xl font-regular leading-none">{{ selectedMenuItem.name }}</h1>
+        <span class="text-sm font-light leading-none">from {{ currentWorkspace.name }}</span>
       </div>
     </div>
-    <div class="flex flex-col flex-grow overflow-auto">
-      <div class=" px-4 py-3">
-        <div>
-          Journeys for the Selected Workspace
-          <journey-tile v-for="(journey, index) in this.userJourneys" :key="index" :journeyData="journey"/>
-        </div>
-        <div>
-          Roadmaps for the Selected Journey
-          <roadmap-tile v-for="(roadmap, index) in roadmaps" :key="index" :roadmapData="roadmap"/>
-        </div>
+    <div class="flex flex-grow overflow-auto w-full">
+      <div class="flex">
+        <section class="text-gray-600">
+          <div class="p-5 w-full">
+            <div class="w-full mb-2">
+              <div class="w-full mb-6 lg:mb-0">
+                <h1 class="sm:text-4xl text-5xl font-light text-gray-900">Journeys</h1>
+                <div class="h-1 my-2 w-20 bg-primary rounded"></div>
+              </div>
+            </div>
+            <div class="flex justify-between w-full space-x-5">
+              <journey-thumbnail v-for="(journey, index) in this.userJourneys" :key="index" :journeyData="journey"/> 
+              <div class="flex text-left my-5 w-96"> 
+                <div class="">
+                  <div class="flex flex-col">
+                    <div class="bg-white shadow-sm border-2 border-dashed rounded-3xl p-4">
+                      <div class="flex-none lg:flex">
+                        <div class="h-full w-full lg:h-48 lg:w-48 lg:mb-0 mb-3">
+                          
+                        </div>
+                        <div class="flex-auto ml-3 justify-evenly py-2">
+                        <div class="flex flex-wrap ">
+                          <div class="w-full flex-none text-xs text-blue-700 font-medium ">
+                            
+                          </div>
+                          <h2 class="flex-auto text-lg font-light"></h2>
+                        </div>
+                        <p class="mt-3"></p>
+                        <div class="flex py-4  text-sm text-gray-500">
+                          <div class="flex-1 inline-flex items-center">
+                            
+                            <p class=""></p>
+                          </div>
+                          <div class="flex-1 inline-flex items-center">
+                            
+                            <p class=""></p>
+                          </div>
+                        </div>
+                       
+                          <div class="flex space-x-3 text-sm font-medium">
+                            <div class="flex-auto flex space-x-3">
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="flex flex-grow overflow-auto w-full">
+      <div class="flex flex-col">
+        <!-- component -->
+        <section class="text-gray-600">
+          <div class="container p-5 mx-auto">
+            <div class="flex flex-wrap w-full mb-8">
+              <div class="w-full mb-6 lg:mb-0">
+                <h1 class="sm:text-4xl text-5xl font-light mb-2 text-gray-900">Roadmaps</h1>
+                <div class="h-1 w-20 bg-primary rounded"></div>
+              </div>
+            </div>
+            <div class="flex text-center">
+              <div class="w-44">
+                <div class="bg-greytwo rounded-lg p-2 xl:p-6">
+                  a
+                </div>
+              </div>
+              <div class="w-44">
+                <div class="bg-greytwo rounded-lg p-2 xl:p-6">
+                  a
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
     <div class="h-12 bg-white px-4 pb-4">
@@ -60,8 +122,10 @@
         </button>
       </div>
     </div>
+    
   </div>
-  <div class="flex flex-col flex-shrink-0 w-1/4 max-w-xs border-l border-gray-300 bg-gray-100">
+  
+  <div class="flex flex-col flex-shrink-0 w-1/4 max-w-xs border-l border-gray-300 bg-greyone">
     <div class="flex items-center h-16 border-b border-gray-300 px-4">
       <div class="">
         <h2 class="text-sm font-semibold leading-none">Additional Utilities</h2>
@@ -115,10 +179,7 @@
 </template>
 <script>
 // import components //
-import JourneyTile from '../components/journeys/JourneyTile.vue';
-import RoadmapTile from '../components/roadmaps/RoadmapTile.vue';
-import SidebarMenu from '../components/layouts/SidebarMenu.vue';
-import WorkspaceSelector from '../components/workspaces/WorkspaceSelector.vue';
+import JourneyThumbnail from '../components/journeys/JourneyThumbnail.vue';
 
 export default ({
   name: 'ApplicationContainer',
@@ -126,10 +187,7 @@ export default ({
     
   }),
   components: {
-    JourneyTile,
-    RoadmapTile,
-    SidebarMenu,
-    WorkspaceSelector
+    JourneyThumbnail
   },
   computed: {
     currentWorkspace: function() {

@@ -1,3 +1,6 @@
+/* journey.store.js */
+import axios from "axios";
+
 // initial state object //
 const initialState = () => ({
   currentJourney: null,
@@ -18,7 +21,13 @@ const getters = {
 }
 
 // actions //
-const actions = { }
+const actions = {
+
+  createNewJourney: ({commit, dispatch}, payload) => {
+    
+  }
+
+}
 
 // mutations //
 const mutations = { 
