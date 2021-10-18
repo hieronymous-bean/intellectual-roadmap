@@ -27,7 +27,7 @@ const getters = {
 // actions //
 const actions = {
   googleLogIn: async ({commit, dispatch}) => {
-    let a = await axios.get(`${apiEndpointDomain}/auth/google`).then(res => {
+    let a = await axios.get(`http://localhost:3000/login`).then(res => {
       console.log(res)
       return res;
     })

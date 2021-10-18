@@ -22,7 +22,7 @@ app.use(cors());
 require('./database/workspace/index.js')(app);
 
 // load authentication middleware and associated routes //
-require ('./api/authentication/passwordAuth')(app);
+require ('./api/authentication/Auth0.js')(app);
 
 // connect to mongodb database //
 const mongoose = require('mongoose');
@@ -40,19 +40,6 @@ app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-
-// session middleware //
-app.use(session({
-  secret: "tony",
-  resave: false ,
-  saveUninitialized: true ,
-}));
-
-// init passport on every route call //
-app.use(passport.initialize());
-
-// allow passport to use express-session //
-app.use(passport.session());
 
 // main server init //
 const port = process.env.SERVER_PORT || '3000';

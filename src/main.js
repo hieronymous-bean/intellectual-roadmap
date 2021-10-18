@@ -12,7 +12,10 @@ import roadmaps from './assets/data/roadmaps.json';
 import { instantiateWorkspaces } from './utilities/workspaces/workspaces';
 import { instantiateJourneys } from './utilities/journeys/journeys';
 import { instantiateRoadmaps } from './utilities/roadmaps/roadmaps';
+import { Auth0Plugin } from './utilities/authentication/authentication';
 
+const Auth0Domain = process.env.AUTH0_DOMAIN;
+const Auth0ClientId = process.env.AUTH0_CLIENT_ID
 
 // import primary CSS files //
 import './assets/css/tailwind.css';
@@ -27,6 +30,20 @@ const app = createApp(App);
 // declare the store and router //
 app.use(store);
 app.use(router);
+
+// install the authentication plugin here
+app.use(Auth0Plugin, {
+  Auth0Domain,
+  Auth0ClientId,
+  onRedirectCallback: appState => {
+    router.push(
+      appState && appState.targetUrl
+        ? appState.targetUrl
+        : window.location.pathname
+    );
+  }
+
+});
 
 // main mount //
 app.mount('#app');
