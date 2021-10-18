@@ -32,7 +32,7 @@
         <div class="flex flex-col sm:flex-row items-center mb-5 sm:space-x-5">
           <div class="w-full sm:w-1/2">
             <p class="mb-2 font-normal text-dark">Workspace Color</p>
-            <select type="text" name="" v-model="workspaceColor" class="w-full p-5 bg-white border border-gray-200 rounded shadow-sm appearance-none" id="">
+            <select type="text" name="" v-model="workspaceColor" class="w-full p-5 bg-white border border-gray-200 rounded shadow-sm" id="">
               <option value="#000000">Purple</option>
               <option value="#000000">Blue</option>
               <option value="#000000">Green</option>
@@ -44,7 +44,7 @@
             <select
               type="text"
               name=""
-              class="w-full p-5 bg-white border border-gray-200 rounded shadow-sm appearance-none"
+              class="w-full p-5 bg-white border border-gray-200 rounded shadow-sm"
               id="" v-model="workspaceCategory"
             >
               <option value="professional">Professional</option>
@@ -62,7 +62,7 @@
             id="check1"
             name="check1"
           />
-          <label class="inline-flex font-semibold text-gray-400" for="check1">
+          <label class="inline-flex font-normal text-gray-400" for="check1">
             Option</label
           ><br />
           <input
@@ -72,16 +72,16 @@
             name="check2"
                   checked
           />
-          <label class="inline-flex font-semibold text-blue-500" for="check2">
+          <label class="inline-flex font-normal text-blue-500" for="check2">
             Option</label
           >
         </div>
       </div>
       <div class="flex flex-row items-center justify-between p-5 bg-white border-t border-gray-200 rounded-bl-lg rounded-br-lg">
-        <button @click="$emit('closeCreateWorkspaceModal')" class="px-4 py-2 text-gray-300 font-semibold bg-gray-100 hover:bg-gray-200 rounded">
+        <button @click="$emit('closeCreateWorkspaceModal')" class="px-4 py-2 text-gray-300 font-normal bg-gray-100 hover:bg-gray-200 rounded">
           Cancel
         </button>
-        <button @click="createNewWorkspace()" class="px-4 py-2 text-white font-semibold bg-blue-500 rounded">
+        <button @click="createNewWorkspace()" class="px-4 py-2 text-white font-normal bg-blue-500 rounded">
           Create
         </button>
       </div>
