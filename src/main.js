@@ -3,6 +3,8 @@ import App from './App.vue';
 import router from './router';
 import { store } from './store';
 
+import Auth from './utilities/authentication/authentication';
+
 // temporarily importing this dummy data for development purposes //
 import workspaces from './assets/data/workspaces.json';
 import journeys from './assets/data/journeys.json';
@@ -12,10 +14,13 @@ import roadmaps from './assets/data/roadmaps.json';
 import { instantiateWorkspaces } from './utilities/workspaces/workspaces';
 import { instantiateJourneys } from './utilities/journeys/journeys';
 import { instantiateRoadmaps } from './utilities/roadmaps/roadmaps';
-import { Auth0Plugin } from './utilities/authentication/authentication';
+import { setupAuth } from './utilities/authentication/authentication';
 
-const Auth0Domain = process.env.AUTH0_DOMAIN;
-const Auth0ClientId = process.env.AUTH0_CLIENT_ID
+const authConfig = {
+  "domain": process.env.AUTH0_DOMAIN,
+  "client_id": process.env.AUTH0_CLIENT_ID,
+  "redirect_uri": "http://localhost:8080"
+}
 
 // import primary CSS files //
 import './assets/css/tailwind.css';
@@ -24,6 +29,14 @@ instantiateWorkspaces(workspaces.data);
 instantiateJourneys(journeys.data);
 instantiateRoadmaps(roadmaps.data);
 
+function callbackRedirect(appState) {
+  router.push(
+    appState && appState.targetUrl
+      ? appState.targetUrl
+      : '/'
+  );
+}
+
 // initialize application //
 const app = createApp(App);
 
@@ -31,19 +44,6 @@ const app = createApp(App);
 app.use(store);
 app.use(router);
 
-// install the authentication plugin here
-app.use(Auth0Plugin, {
-  Auth0Domain,
-  Auth0ClientId,
-  onRedirectCallback: appState => {
-    router.push(
-      appState && appState.targetUrl
-        ? appState.targetUrl
-        : window.location.pathname
-    );
-  }
-
-});
-
-// main mount //
-app.mount('#app');
+setupAuth(authConfig, callbackRedirect).then((auth) => {
+  app.use(auth).mount('#app')
+})

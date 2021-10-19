@@ -175,7 +175,6 @@
       </div>
     </div>
   </div>
-  
 </template>
 <script>
 // import components //
@@ -184,7 +183,7 @@ import JourneyThumbnail from '../components/journeys/JourneyThumbnail.vue';
 export default ({
   name: 'ApplicationContainer',
   data: () => ({
-    
+
   }),
   components: {
     JourneyThumbnail

@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col flex-shrink-0 w-64 border-r border-gray-300 bg-greyone">
-    <button @click="selectWorkspaceDashboard()" class="flex-shrink-0 relative text-sm focus:outline-none group">
+    <button class="flex-shrink-0 relative text-sm focus:outline-none group">
       <div class="flex items-center justify-between w-full h-16 px-4 border-b border-gray-300 hover:bg-gray-100">
         <span class="font-normal" :style="{ color: currentWorkspace.color }">
           {{ currentWorkspace.name }}
@@ -13,6 +13,7 @@
         <a class="w-full px-4 py-2 text-left hover:bg-gray-300" href="#"></a>
       </div>
     </button>
+    
     <div class="h-0 overflow-auto flex-grow">
       <div class="mt-3">
         <menu-item v-for="(item, index) of this.menu" :key="index" :menuItemData="item"/>

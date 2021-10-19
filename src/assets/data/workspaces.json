@@ -1,31 +1,36 @@
 {
-  "data": [
-    {
-      "id": 1,
-      "ownerId": 1,
-      "name": "Jeffrey's Primary Workspace",
-      "description": "This is the description for workspace one.",
-      "category": "Personal",
-      "color": "#2563EB",
-      "icon": ""
-    },
-    {
-      "id": 2,
-      "ownerId": 1,
-      "name": "An Extra Workspace",
-      "description": "This is the description for workspace two.",
-      "category": "Professional",
-      "color": "#4F46E5",
-      "icon": ""
-    },
-    {
-      "id": 3,
-      "ownerId": 1,
-      "name": "Yet Another Workspace",
-      "description": "This is the description for workspace two.",
-      "category": "Shared",
-      "color": "#6D28D9",
-      "icon": ""
-    }
-  ]
+  "data": [{
+    "id": 1,
+    "name": "My Awesome Workspace",
+    "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+    "type": "standard",
+    "owner": 1234,
+    "creator": 1234,
+    "color": "#3453CD",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/polestar-4d6c0.appspot.com/o/images%2Fmountain.svg?alt=media&token=45235353-c572-4745-9c34-4116b1b17068",
+    "created": "2021-07-10T19:40:37Z",
+    "modified": "2021-04-13T15:14:16Z"
+  }, {
+    "id": 2,
+    "name": "Workspace for New User",
+    "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+    "type": "standard",
+    "owner": 1234,
+    "creator": 1234,
+    "color": "#C4F1BE",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/polestar-4d6c0.appspot.com/o/images%2Fcircuit.svg?alt=media&token=d708621a-421e-4fcf-b052-953e4c1dd216",
+    "created": "2021-04-13T03:37:22Z",
+    "modified": "2021-01-09T05:34:10Z"
+  }, {
+    "id": 3,
+    "name": "This is my Workspace",
+    "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+    "type": "standard",
+    "owner": 1234,
+    "creator": 1234,
+    "color": "#F08700",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/polestar-4d6c0.appspot.com/o/images%2Fmountain.svg?alt=media&token=45235353-c572-4745-9c34-4116b1b17068",
+    "created": "2021-02-22T05:07:41Z",
+    "modified": "2021-04-15T08:12:02Z"
+  }]
 }

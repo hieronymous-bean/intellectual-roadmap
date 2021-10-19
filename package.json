@@ -34,6 +34,7 @@
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "vue": "^3.2.20",
+    "vue-auth0-plugin": "^2.4.1",
     "vue-router": "^4.0.11",
     "vuex": "^4.0.2",
     "vuex-persistedstate": "^4.1.0"

@@ -16,7 +16,7 @@ import ViewRoadmaps from '../views/ViewRoadmaps.vue';
 const routes = [
   {
     path: '/',
-    redirect: '/app'
+    redirect: '/app',
   },
   {
     path: '/app',

@@ -3,7 +3,9 @@
     <span v-show="notifications" class="absolute w-3 h-3 rounded-full bg-blue-400 top-0 right-0 -mt-1 -mr-1"></span>
   </a>
 </template>
+
 <script>
+
 export default ({
   name: 'WorkspaceSelector',
   data: () => ({
