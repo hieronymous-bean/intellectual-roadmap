@@ -1,16 +1,103 @@
 {
-  "data": [
-    {
-      "id": 12345,
-      "firstName": "Jeffrey",
-      "lastName": "Brown",
-      "displayName": "Jeffrey Brown",
-      "email": "jeffreybrown7193@gmail.com",
-      "photo": "",
-      "avatar": "",
-      "favorites": [],
-      "preferences": [],
-      "integrations": []
-    }
-  ]
+  "data": [{
+    "id": 1234,
+    "firstName": "Julie",
+    "lastName": "Weeks",
+    "email": "jweeks0@shinystat.com",
+    "displayName": "Julie Weeks",
+    "photo": "https://randomuser.me/api/portraits/lego/7.jpg",
+    "avatar": "https://randomuser.me/api/portraits/lego/7.jpg",
+    "favorites": [
+      {
+      },
+      {
+      },
+      {
+      }
+    ],
+    "preferences": [
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      }
+    ],
+    "integrations": [
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      }
+    ]
+  }, {
+    "id": 4567,
+    "firstName": "Clare",
+    "lastName": "Ordemann",
+    "email": "cordemann1@joomla.org",
+    "displayName": "Clare Ordemann",
+    "photo": "https://randomuser.me/api/portraits/lego/8.jpg",
+    "avatar": "https://randomuser.me/api/portraits/lego/9.jpg",
+    "favorites": [
+      {
+      },
+      {
+      }
+    ],
+    "preferences": [
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      }
+    ],
+    "integrations": [
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      }
+    ]
+  }, {
+    "id": 8900,
+    "firstName": "Alwyn",
+    "lastName": "Swiers",
+    "email": "aswiers2@senate.gov",
+    "displayName": "Alwyn Swiers",
+    "photo": "https://randomuser.me/api/portraits/lego/9.jpg",
+    "avatar": "https://randomuser.me/api/portraits/lego/9.jpg",
+    "favorites": [
+      {
+      }
+    ],
+    "preferences": [
+      {
+      },
+      {
+      }
+    ],
+    "integrations": [
+      {
+      },
+      {
+      },
+      {
+      },
+      {
+      }
+    ]
+  }]
 }
