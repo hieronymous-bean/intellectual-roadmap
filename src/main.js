@@ -19,7 +19,7 @@ import { setupAuth } from './utilities/authentication/authentication';
 const authConfig = {
   "domain": process.env.AUTH0_DOMAIN,
   "client_id": process.env.AUTH0_CLIENT_ID,
-  "redirect_uri": "http://localhost:8080"
+  "redirect_uri": window.location.origin
 }
 
 // import primary CSS files //
@@ -28,6 +28,7 @@ import './assets/css/tailwind.css';
 instantiateWorkspaces(workspaces.data);
 instantiateJourneys(journeys.data);
 instantiateRoadmaps(roadmaps.data);
+let app = createApp(App).use(store).use(router)
 
 function callbackRedirect(appState) {
   router.push(
@@ -36,13 +37,6 @@ function callbackRedirect(appState) {
       : '/'
   );
 }
-
-// initialize application //
-const app = createApp(App);
-
-// declare the store and router //
-app.use(store);
-app.use(router);
 
 setupAuth(authConfig, callbackRedirect).then((auth) => {
   app.use(auth).mount('#app')

@@ -8,7 +8,7 @@
         </svg>
       </a>
     </div>
-    <sidebar-menu />
+    <sidebar-menu />{{this.$auth.user}}
     <router-view />
     <create-workspace-modal v-show="showCreateWorkspaceModal" @closeCreateWorkspaceModal="showCreateWorkspaceModal = false"/>
   </div>

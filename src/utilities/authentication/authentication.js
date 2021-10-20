@@ -1,4 +1,5 @@
 import createAuth0Client from '@auth0/auth0-spa-js'
+import { STATES } from 'mongoose'
 import { computed, reactive, watchEffect } from 'vue'
 
 let client
@@ -113,7 +114,7 @@ export const setupAuth = async (options, callbackRedirect) => {
     ) {
       // handle the redirect and retrieve tokens
       const { appState } = await client.handleRedirectCallback()
-
+      state.error = null;
       // Notify subscribers that the redirect callback has happened, passing the appState
       // (useful for retrieving any pre-authentication state)
       callbackRedirect(appState)

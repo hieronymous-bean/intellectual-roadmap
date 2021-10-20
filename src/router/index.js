@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { routeGuard } from '../utilities/authentication/authentication';
 
 // application containers //
 import ApplicationContainer from '../containers/ApplicationContainer.vue';
@@ -12,7 +13,6 @@ import RoadmapDetails from '../views/RoadmapDetails.vue';
 import ViewJourneys from '../views/ViewJourneys.vue';
 import ViewRoadmaps from '../views/ViewRoadmaps.vue';
 
-
 const routes = [
   {
     path: '/',
@@ -23,6 +23,7 @@ const routes = [
     component: ApplicationContainer,
     name: 'ApplicationContainer',
     redirect: '/app/dashboard',
+    beforeEnter: routeGuard,
     children: [
       {
         path: '/app/dashboard',

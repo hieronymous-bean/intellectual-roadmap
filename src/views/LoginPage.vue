@@ -96,11 +96,13 @@ export default {
         if (!res) return;
       });
     },
-    login() {
-      this.$auth.loginWithRedirect()
+    async login() {
+      await this.$auth.loginWithRedirect();
     },
     logout() {
-      
+      this.$auth.logout({
+        returnTo: window.location.origin
+      });
     }
   }
 }
